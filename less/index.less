@@ -77,7 +77,11 @@ html, body {
 	margin:0 auto;
 	line-height: 1.0;
 	font-size:62.5%;
+	@media (max-width:500px){
+		width:100%;
+	}
 }
+
 header{
 	width:@fullWidth;
 	margin:0px auto;
@@ -111,8 +115,16 @@ nav{
 	margin:0px auto;
 	a{
 		width:10%;
+		@media (max-width:500px){
+		width:20%;
+		}
+	}
+	@media (max-width:500px){
+		justify-content: flex-start;
+		text-align:left;
 	}
 }
+
 
 main{
 	background:#eee;
@@ -138,10 +150,14 @@ main{
 	.flex();
 	width:@fullWidth;
 	margin:0px auto;
+	@media (max-width:500px){
+		flex-direction:column;
+	}
 	.box{
 		width:@halfWidth;
-	}
-	.leftBox{
+		@media (max-width:500px){
+			width:@fullWidth;
+		}
 	}
 	.rightBox{
 		.skillBox{
@@ -162,7 +178,7 @@ main{
 }
 .history{
 	width:@fullWidth;
-	margin:0px auto;
+	margin:20px auto;
 	font-size:2rem;
 }
 h3{

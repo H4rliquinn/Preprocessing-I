@@ -145,6 +145,12 @@ body {
   line-height: 1;
   font-size: 62.5%;
 }
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+  }
+}
 header {
   width: 90%;
   margin: 0px auto;
@@ -178,6 +184,17 @@ nav {
 nav a {
   width: 10%;
 }
+@media (max-width: 500px) {
+  nav a {
+    width: 20%;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
 main {
   background: #eee;
   padding: 20px;
@@ -202,8 +219,18 @@ main .blurb {
   width: 90%;
   margin: 0px auto;
 }
+@media (max-width: 500px) {
+  .middleContent {
+    flex-direction: column;
+  }
+}
 .middleContent .box {
   width: 45%;
+}
+@media (max-width: 500px) {
+  .middleContent .box {
+    width: 90%;
+  }
 }
 .middleContent .rightBox .skillBox {
   display: flex;
@@ -221,7 +248,7 @@ main .blurb {
 }
 .history {
   width: 90%;
-  margin: 0px auto;
+  margin: 20px auto;
   font-size: 2rem;
 }
 h3 {
