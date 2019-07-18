@@ -131,13 +131,17 @@ table {
   display: flex;
   justify-content: space-between;
 }
+.wideCenter {
+  width: 90%;
+  margin: 0px auto;
+}
 .bdr {
   border: 1px solid red;
 }
+/*Main tags*/
 * {
   box-sizing: border-box;
 }
-/*Main tags*/
 html,
 body {
   width: 900px;
@@ -198,8 +202,8 @@ nav a {
 main {
   background: #eee;
   padding: 20px;
-  margin: 0px auto;
   width: 90%;
+  margin: 0px auto;
 }
 main img {
   width: 25%;
@@ -286,7 +290,7 @@ h3 {
 }
 footer {
   width: 90%;
-  margin: 0 auto;
+  margin: 0px auto;
   font: bold 1.6rem 'Inconsolata', monospace;
   height: 40px;
   background: rebeccapurple;

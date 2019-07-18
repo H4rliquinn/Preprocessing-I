@@ -61,16 +61,22 @@ table {
 	display:flex;
 	justify-content: space-between;
 }
+.wideCenter{
+	width:@fullWidth;
+	margin:0px auto;
+}
 
 .bdr{
 	border:1px solid red;
 }
 
+/*Main tags*/
+
 * {
 	box-sizing: border-box;
 }
 
-/*Main tags*/
+
 
 html, body {
 	width:900px;
@@ -83,8 +89,7 @@ html, body {
 }
 
 header{
-	width:@fullWidth;
-	margin:0px auto;
+	.wideCenter();
 }
 
 body {
@@ -129,8 +134,7 @@ nav{
 main{
 	background:#eee;
 	padding:20px;
-	margin:0px auto;
-	width:@fullWidth;
+	.wideCenter();
 	img{
 		width:25%;
 		margin:30px 0px;
@@ -148,8 +152,7 @@ main{
 
 .middleContent{
 	.flex();
-	width:@fullWidth;
-	margin:0px auto;
+	.wideCenter();
 	@media (max-width:500px){
 		flex-direction:column;
 	}
@@ -212,8 +215,7 @@ h3{
 
 
 footer{
-	width:@fullWidth;
-	margin:0 auto;
+	.wideCenter();
 	font:bold 1.6rem @inc;
 	height:40px;
 	background:rebeccapurple;
