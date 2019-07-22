@@ -48,12 +48,182 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+/* Variables */
+
+
+@fullWidth:90%;
+@halfWidth:@fullWidth/2;
+@dm:'DM Serif Display', serif;
+@mc:'Mountains of Christmas', cursive;
+@inc:'Inconsolata', monospace;
+
+.flex{
+	display:flex;
+	justify-content: space-between;
 }
+.wideCenter{
+	width:@fullWidth;
+	margin:0px auto;
+}
+
+.bdr{
+	border:1px solid red;
+}
+
+/*Main tags*/
+
+* {
+	box-sizing: border-box;
+}
+
+
 
 html, body {
-    height: 100%;
+	width:900px;
+	margin:0 auto;
+	line-height: 1.0;
+	font-size:62.5%;
+	@media (max-width:500px){
+		width:100%;
+	}
 }
 
+header{
+	.wideCenter();
+}
+
+body {
+	border:1px solid black;
+}
+
+h1{
+	font:bold 2.5rem @dm;
+}
+h2{
+	font:bold 2.1rem @mc;
+}
+a{
+	font:bold 2.1rem @mc;
+	text-decoration:none;
+	color:black;
+}
+p{
+	font:1.8rem @inc;
+	margin:15px 0px;
+}
+
+/*Sections*/
+nav{
+	.flex();
+	justify-content:flex-end;
+	text-align:right;
+	margin:0px auto;
+	a{
+		width:10%;
+		@media (max-width:500px){
+		width:20%;
+		}
+	}
+	@media (max-width:500px){
+		justify-content: flex-start;
+		text-align:left;
+	}
+}
+
+
+main{
+	background:#eee;
+	padding:20px;
+	.wideCenter();
+	img{
+		width:25%;
+		margin:30px 0px;
+	}
+	button{
+		margin:20px 0px;
+	}
+	.blurb{
+		border-top:1px dotted gray;
+		margin-top:30px 0px;
+		padding-top:30px;
+	}
+
+}
+
+.middleContent{
+	.flex();
+	.wideCenter();
+	@media (max-width:500px){
+		flex-direction:column;
+	}
+	.box{
+		width:@halfWidth;
+		@media (max-width:500px){
+			width:@fullWidth;
+		}
+	}
+	.rightBox{
+		.skillBox{
+			.flex();
+			flex-direction:column;
+			border-left:1px solid gray;
+			border-right:1px solid gray;
+			a{
+				border-top:1px solid gray;
+				&:last-child{
+					border-bottom:1px solid gray;
+				}
+				padding:15px;
+			
+			}
+		}
+	}
+}
+.history{
+	width:@fullWidth;
+	margin:20px auto;
+	font-size:2rem;
+}
+h3{
+	font:bold 2.3rem @dm;
+}
+/* Variables
+================================== */
+@bw: 1px;  // border width
+
+
+/* Tables
+================================== */
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;  // Default to full width
+  padding: 0.8em 1.2em;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  xborder: solid @bw red;
+  > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+}
+
+.Rtable--4cols > .Rtable-cell  { width: 25%; }
+
+
+footer{
+	.wideCenter();
+	font:bold 1.6rem @inc;
+	height:40px;
+	background:rebeccapurple;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	div{
+		width:100%;
+		text-align:center;
+		padding-top:10px;
+	}
+}

@@ -1,1 +1,304 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Variables */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.wideCenter {
+  width: 90%;
+  margin: 0px auto;
+}
+.bdr {
+  border: 1px solid red;
+}
+/*Main tags*/
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 900px;
+  margin: 0 auto;
+  line-height: 1;
+  font-size: 62.5%;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+  }
+}
+header {
+  width: 90%;
+  margin: 0px auto;
+}
+body {
+  border: 1px solid black;
+}
+h1 {
+  font: bold 2.5rem 'DM Serif Display', serif;
+}
+h2 {
+  font: bold 2.1rem 'Mountains of Christmas', cursive;
+}
+a {
+  font: bold 2.1rem 'Mountains of Christmas', cursive;
+  text-decoration: none;
+  color: black;
+}
+p {
+  font: 1.8rem 'Inconsolata', monospace;
+  margin: 15px 0px;
+}
+/*Sections*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-end;
+  text-align: right;
+  margin: 0px auto;
+}
+nav a {
+  width: 10%;
+}
+@media (max-width: 500px) {
+  nav a {
+    width: 20%;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+main {
+  background: #eee;
+  padding: 20px;
+  width: 90%;
+  margin: 0px auto;
+}
+main img {
+  width: 25%;
+  margin: 30px 0px;
+}
+main button {
+  margin: 20px 0px;
+}
+main .blurb {
+  border-top: 1px dotted gray;
+  margin-top: 30px 0px;
+  padding-top: 30px;
+}
+.middleContent {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0px auto;
+}
+@media (max-width: 500px) {
+  .middleContent {
+    flex-direction: column;
+  }
+}
+.middleContent .box {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .middleContent .box {
+    width: 90%;
+  }
+}
+.middleContent .rightBox .skillBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.middleContent .rightBox .skillBox a {
+  border-top: 1px solid gray;
+  padding: 15px;
+}
+.middleContent .rightBox .skillBox a:last-child {
+  border-bottom: 1px solid gray;
+}
+.history {
+  width: 90%;
+  margin: 20px auto;
+  font-size: 2rem;
+}
+h3 {
+  font: bold 2.3rem 'DM Serif Display', serif;
+}
+/* Variables
+================================== */
+/* Tables
+================================== */
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  xborder: solid 1px red;
+}
+.Rtable-cell > h1,
+.Rtable-cell > h2,
+.Rtable-cell > h3,
+.Rtable-cell > h4,
+.Rtable-cell > h5,
+.Rtable-cell > h6 {
+  margin: 0;
+}
+.Rtable--4cols > .Rtable-cell {
+  width: 25%;
+}
+footer {
+  width: 90%;
+  margin: 0px auto;
+  font: bold 1.6rem 'Inconsolata', monospace;
+  height: 40px;
+  background: rebeccapurple;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+footer div {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
